@@ -1,0 +1,116 @@
+<head>
+<title>Shopping-Cart</title>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel = "icon" href ="https://img.favpng.com/22/16/7/shopping-cart-icon-png-favpng-WzFfWAWJe97MmDVjyDJwr5Y69.jpg" type = "image/x-icon">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="script.js"></script>
+</head>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="container" onmousemove="TOT()">
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price $</th>
+                        <th class="text-center">Total $</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" onclick="imageChanger(this)" src="https://www.festivalclaca.cat/pics/b/5/55971_hollow-heart-png.png" style="width: 15px; height: 15px;"> </a>
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://cdn.movertix.com/media/catalog/product/cache/image/1200x/h/u/huawei-y5-2019-dual-sim-en-negro-de-16gb-y-2gb-ram-amn-lx9.jpg" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Huawei Y5 2019</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Huawei</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-sm-1 col-md-1" style="text-align: center">
+                            <input type="number" class="form-control" oninput="total(this,'price1','t1');TOT()" min="0" max="20" value="0">
+                        </td>
+                        <td class="col-sm-1 col-md-1 text-center" id="price1"><strong>122.66</strong></td>
+                        <td class="col-sm-1 col-md-1 text-center" id="t1"><strong>0</strong></td>
+                        <td class="col-sm-1 col-md-1">
+                        <button type="button" onclick="suppr(this);TOT()"  class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                                            <!--new product-->
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" onclick="imageChanger(this)" src="https://www.festivalclaca.cat/pics/b/5/55971_hollow-heart-png.png" style="width: 15px; height: 15px;"> </a>
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://www.tunisianet.com.tn/126907-large/huawei-p30-pro-memoire-256-go.jpg" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Huawei P30 Pro</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Huawei</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="number" class="form-control" oninput="total(this,'price2','t2');TOT()" min="0" max="20" value="0">
+                        </td>
+                        <td class="col-md-1 text-center" id="price2"><strong>614</strong></td>
+                        <td class="col-md-1 text-center" id="t2"><strong>0</strong></td>
+                        <td class="col-md-1">
+                        <button type="button" onclick="suppr(this);TOT()" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    <tr>
+                                             <!--new product-->
+                    <tr>
+                        <td class="col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" onclick="imageChanger(this)" src="https://www.festivalclaca.cat/pics/b/5/55971_hollow-heart-png.png" style="width: 15px; height: 15px;"> </a>
+                            <a class="thumbnail pull-left" href="#"> <img class="media-object" src="https://tunisiatech.tn/2339-large_default/samsung-galaxy-a80-prix-tunisie.jpg" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><a href="#">Samsung A80</a></h4>
+                                <h5 class="media-heading"> by <a href="#">Samsung</a></h5>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+                        <td class="col-md-1" style="text-align: center">
+                        <input type="number" class="form-control" oninput="total(this,'price3','t3');TOT()" min="0" max="20" value="0">
+                        </td>
+                        <td class="col-md-1 text-center" id="price3"><strong>549.99</strong></td>
+                        <td class="col-md-1 text-center" id="t3"><strong>0</strong></td>
+                        <td class="col-md-1">
+                        <button type="button" onclick="suppr(this);TOT()" class="btn btn-danger">
+                            <span class="glyphicon glyphicon-remove"></span> Remove
+                        </button></td>
+                    </tr>
+                    
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td><h3>Total</h3></td>
+                        <td class="text-right" style="display: flex; flex-direction: row;"><h3 id="TOTAL"><strong>--</strong></h3><h3><strong> $</strong></h3></td>
+                    </tr>
+                    <tr>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>   </td>
+                        <td>
+                        <button type="button" class="btn btn-default">
+                            <span class="glyphicon glyphicon-shopping-cart"></span> Continue Shopping
+                        </button></td>
+                        <td>
+                        <button type="button" class="btn btn-success">
+                            Checkout <span class="glyphicon glyphicon-play"></span>
+                        </button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
